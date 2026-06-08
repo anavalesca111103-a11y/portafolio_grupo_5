@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Digital — Portafolio Premium de Desarrollo Web</title>
+    <!-- Tailwind CSS para el diseño elegante y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter para máxima legibilidad y sofisticación -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para íconos sutiles y refinados -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712; /* slate-950 */
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+        /* Efecto sutil de gradiente de fondo */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 glass-panel border-b border-white/5 py-4 px-6 md:px-12 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo Sophisticado -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition duration-300">
+                    <span class="text-white font-black text-lg tracking-tighter">AV</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-sm tracking-wider text-white uppercase">AV Digital</span>
+                    <span class="text-[9px] text-indigo-400 font-bold uppercase tracking-widest leading-none">Estudio Creativo</span>
+                </div>
+            </a>
+
+            <!-- Menu de enlaces minimalista -->
+            <div class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest text-slate-400">
+                <a href="#proyectos" class="hover:text-indigo-400 transition-colors uppercase">Casos de Éxito</a>
+                <a href="#servicios" class="hover:text-indigo-400 transition-colors uppercase">Servicios</a>
+                <a href="#contacto" class="hover:text-indigo-400 transition-colors uppercase">Contacto</a>
+            </div>
+
+            <!-- Botón de Acción Principal -->
+            <a href="#contacto" class="bg-white hover:bg-slate-200 text-slate-950 text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md uppercase tracking-wider">
+                Cotizar un proyecto
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative py-28 px-6 md:px-12 text-center overflow-hidden border-b border-white/5">
+        <!-- Luces de fondo decorativas de diseño web moderno -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 w-[350px] h-[350px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-1/4 translate-x-1/2 w-[350px] h-[350px] bg-violet-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+            <span class="text-indigo-400 text-[10px] font-extrabold uppercase tracking-[0.25em] bg-indigo-500/10 px-4 py-2 rounded-full border border-indigo-500/20 mb-8">
+                Desarrollo Web & Digitalización de Negocios
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1] max-w-3xl">
+                Impulsamos la presencia digital en <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500">Nicaragua</span>
+            </h1>
+            <p class="text-slate-400 text-sm md:text-base mt-6 max-w-xl leading-relaxed">
+                Diseñamos y desarrollamos soluciones web robustas, rápidas y personalizadas para transformar negocios locales en marcas competitivas y de alta conversión.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#proyectos" class="bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold px-8 py-3.5 rounded-full transition duration-300 text-xs uppercase tracking-widest shadow-lg shadow-indigo-500/20">
+                    Ver Proyectos
+                </a>
+               
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="proyectos" class="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <div class="text-center mb-16">
+            <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Casos de Estudio</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Nuestras Propuestas Digitales</h2>
+            <p class="text-slate-500 text-xs md:text-sm mt-3 max-w-md mx-auto leading-relaxed">
+                Sitios web interactivos diseñados desde cero para negocios nicaragüenses líderes en su sector que no poseían un canal digital propio.
+            </p>
+        </div>
+
+        <!-- Grid de Proyectos -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- CASO 1: Comedor El Gordito -->
+            <div class="group glass-panel rounded-3xl overflow-hidden hover:border-indigo-500/30 transition-all duration-300 flex flex-col shadow-xl">
+                <!-- Tarjeta Visual del Proyecto -->
+                <div class="p-8 pb-4 bg-gradient-to-b from-amber-500/10 to-transparent border-b border-white/5 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-amber-500/10 text-amber-400 text-[9px] px-2.5 py-1 rounded-full font-bold uppercase tracking-widest border border-amber-500/20">
+                        Granada
+                    </div>
+                    <div class="h-32 flex flex-col justify-end items-center text-center">
+                        <span class="text-4xl mb-3">🍽️</span>
+                        <h4 class="font-extrabold text-lg text-white group-hover:text-amber-400 transition-colors duration-300">Comedor El Gordito</h4>
+                        <p class="text-[10px] text-amber-500/80 font-bold uppercase tracking-widest mt-1">Vigorón Tradicional Bilingüe</p>
+                    </div>
+                </div>
+                <!-- Contenido -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-400 text-xs leading-relaxed font-light mb-6">
+                        Página web de conversión turística con selector de idiomas instantáneo y calculadora integrada de pedidos con conexión directa para ordenar desde WhatsApp.
+                    </p>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">Bilingüe</span>
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">Calculadora</span>
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">WhatsApp API</span>
+                        </div>
+                        
+                        <!-- BOTÓN DE DEMO - APUNTA AL IFRAME DE FORMA DINÁMICA -->
+                        <!-- EN EL ATRIBUTO data-url SE CONFIGURA EL NOMBRE DEL ARCHIVO HTML DE "EL GORDITO" -->
+                        <button onclick="openIframeModal('sitio%201/index.html', 'Comedor El Gordito — Granada')" 
+                                class="w-full bg-slate-900 hover:bg-amber-600 hover:text-white text-amber-400 border border-amber-500/20 hover:border-amber-600 text-xs font-bold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Ver Sitio
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASO 2: Taller Samtok -->
+            <div class="group glass-panel rounded-3xl overflow-hidden hover:border-indigo-500/30 transition-all duration-300 flex flex-col shadow-xl">
+                <!-- Tarjeta Visual del Proyecto -->
+                <div class="p-8 pb-4 bg-gradient-to-b from-yellow-500/10 to-transparent border-b border-white/5 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-yellow-500/10 text-yellow-400 text-[9px] px-2.5 py-1 rounded-full font-bold uppercase tracking-widest border border-yellow-500/20">
+                        Managua
+                    </div>
+                    <div class="h-32 flex flex-col justify-end items-center text-center">
+                        <span class="text-4xl mb-3">🛠️</span>
+                        <h4 class="font-extrabold text-lg text-white group-hover:text-yellow-400 transition-colors duration-300">Taller Samtok S.A.</h4>
+                        <p class="text-[10px] text-yellow-500/80 font-bold uppercase tracking-widest mt-1">Ingeniería Automotriz</p>
+                    </div>
+                </div>
+                <!-- Contenido -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-400 text-xs leading-relaxed font-light mb-6">
+                        Portal corporativo industrial con catálogo estructurado de servicios, verificación de convenios con aseguradoras y un formulario reactivo para agendar citas mecánicas.
+                    </p>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">Agendador</span>
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">Aseguradoras</span>
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">SEO Local</span>
+                        </div>
+                        
+                        <!-- BOTÓN DE DEMO - APUNTA AL IFRAME DE FORMA DINÁMICA -->
+                        <!-- EN EL ATRIBUTO data-url SE CONFIGURA EL NOMBRE DEL ARCHIVO HTML DE "SAMTOK" -->
+                        <button onclick="openIframeModal('sitio%202/index.html', 'Taller Mecánico Samtok S.A. — Managua')" 
+                                class="w-full bg-slate-900 hover:bg-yellow-500 hover:text-slate-950 text-yellow-400 border border-yellow-500/20 hover:border-yellow-500 text-xs font-bold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Ver Sitio
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASO 3: Fritanga El Bohemio -->
+            <div class="group glass-panel rounded-3xl overflow-hidden hover:border-indigo-500/30 transition-all duration-300 flex flex-col shadow-xl">
+                <!-- Tarjeta Visual del Proyecto -->
+                <div class="p-8 pb-4 bg-gradient-to-b from-orange-500/10 to-transparent border-b border-white/5 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-orange-500/10 text-orange-400 text-[9px] px-2.5 py-1 rounded-full font-bold uppercase tracking-widest border border-orange-500/20">
+                        Managua
+                    </div>
+                    <div class="h-32 flex flex-col justify-end items-center text-center">
+                        <span class="text-4xl mb-3">🔥</span>
+                        <h4 class="font-extrabold text-lg text-white group-hover:text-orange-400 transition-colors duration-300">Fritanga El Bohemio</h4>
+                        <p class="text-[10px] text-orange-500/80 font-bold uppercase tracking-widest mt-1">Gastronomía Nocturna</p>
+                    </div>
+                </div>
+                <!-- Contenido -->
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-400 text-xs leading-relaxed font-light mb-6">
+                        Página de conversión culinaria nocturna que integra un "Armador de Servicios Fritangueros" interactivo que cotiza precios en tiempo real para envíos por delivery.
+                    </p>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">Armador</span>
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">Dark UI</span>
+                            <span class="text-[10px] bg-slate-900 border border-white/5 text-slate-400 px-2.5 py-1 rounded-md font-semibold">WhatsApp Bot</span>
+                        </div>
+                        
+                        <!-- BOTÓN DE DEMO - APUNTA AL IFRAME DE FORMA DINÁMICA -->
+                        <!-- EN EL ATRIBUTO data-url SE CONFIGURA EL NOMBRE DEL ARCHIVO HTML DE "EL BOHEMIO" -->
+                        <button onclick="openIframeModal('sitio%203/index.html', 'Fritanga El Bohemio — Managua')" 
+                                class="w-full bg-slate-900 hover:bg-orange-500 hover:text-stone-950 text-orange-400 border border-orange-500/20 hover:border-orange-500 text-xs font-bold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Ver Sitio
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicios" class="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <div class="text-center mb-16">
+            <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Nuestra Metodología</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Servicios AV Digital</h2>
+            <p class="text-slate-500 text-xs md:text-sm mt-3 max-w-md mx-auto leading-relaxed">
+                Desarrollo enfocado en conversiones reales, rendimiento excepcional y diseño moderno adaptado a cualquier dispositivo.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:text-left">
+            <div class="glass-panel p-8 rounded-3xl border border-white/5 flex flex-col items-center sm:items-start">
+                <div class="h-12 w-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h4 class="text-base font-bold text-white uppercase tracking-wider font-sans">Desarrollo Web Autocontenido</h4>
+                <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+                    Código limpio, ultra rápido y centralizado en un solo archivo con Tailwind CSS y componentes reactivos nativos de alto impacto.
+                </p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl border border-white/5 flex flex-col items-center sm:items-start">
+                <div class="h-12 w-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h4 class="text-base font-bold text-white uppercase tracking-wider font-sans">Automatización por WhatsApp</h4>
+                <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+                    Sistemas integrados de cotización y pedidos que formatean la orden y la envían directamente al canal de atención del negocio.
+                </p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl border border-white/5 flex flex-col items-center sm:items-start">
+                <div class="h-12 w-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                </div>
+                <h4 class="text-base font-bold text-white uppercase tracking-wider font-sans">SEO Local & Mapas</h4>
+                <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+                    Alineamos tu sitio web con tus fichas de Google Maps para optimizar el alcance regional, indexación y conversión presencial.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="py-24 px-6 md:px-12 bg-slate-900/40 border-t border-white/5">
+        <div class="max-w-xl mx-auto bg-slate-950 p-8 rounded-3xl border border-white/5 shadow-2xl">
+            <h3 class="text-2xl font-extrabold text-center text-white font-sans uppercase tracking-wide">¿Listo para Digitalizar tu Negocio?</h3>
+            <p class="text-center text-slate-500 text-xs mt-2 leading-relaxed">
+                Envíanos tus requerimientos de desarrollo y hablemos de tu próximo sitio web corporativo o gastronómico.
+            </p>
+
+            <form class="mt-8 space-y-5" onsubmit="event.preventDefault(); sendProposalToWhatsApp();">
+                <div>
+                    <label class="text-[10px] uppercase tracking-widest font-bold text-slate-400 block mb-1">Nombre Completo o Empresa</label>
+                    <input type="text" id="contact-name" required placeholder="Ej. Javier Castillo" 
+                           class="w-full bg-slate-900 border border-white/5 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                </div>
+                
+                <div>
+                    <label class="text-[10px] uppercase tracking-widest font-bold text-slate-400 block mb-1">Tipo de Sitio Deseado</label>
+                    <select id="contact-type" class="w-full bg-slate-900 border border-white/5 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-indigo-500 transition-colors">
+                        <option>Gastronómico (Venta Directa/WhatsApp)</option>
+                        <option>Corporativo / Servicios Técnicos</option>
+                        <option>Portafolio Personal de Servicios</option>
+                        <option>Otro Proyecto a la Medida</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-[10px] uppercase tracking-widest font-bold text-slate-400 block mb-1">Breve Descripción de tu Negocio</label>
+                    <textarea id="contact-message" required rows="4" placeholder="Ej. Quiero optimizar las entregas de mi restaurante en Managua..." 
+                              class="w-full bg-slate-900 border border-white/5 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                </div>
+
+                <button type="submit" class="w-full mt-4 bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-widest transition duration-300 shadow-lg shadow-indigo-500/20">
+                    Enviar Consulta a AV Digital
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-12 px-6 border-t border-white/5 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center">
+                    <span class="text-white font-extrabold text-sm tracking-tighter">AV</span>
+                </div>
+                <span class="font-extrabold text-xs tracking-widest text-white uppercase">AV Digital — Nicaragua</span>
+            </div>
+            <p class="text-xs text-slate-600 text-center md:text-right">
+                &copy; 2026 AV Digital. Diseñado con altos estándares de desarrollo interactivo.
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE DEMO PREVIEW MODAL (SOPHISTICATED PREVIEW) -->
+    <div id="demo-modal" class="hidden fixed inset-0 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 md:p-8 z-50 transition-all duration-300 opacity-0">
+        <div class="bg-slate-900 border border-white/10 rounded-3xl w-full max-w-5xl h-[85vh] flex flex-col overflow-hidden shadow-2xl transform scale-95 transition-all duration-300">
+            <!-- Header del Modal -->
+            <div class="bg-slate-950 px-6 py-4 flex justify-between items-center border-b border-white/5">
+                <div class="flex items-center gap-3">
+                    <span class="flex h-2.5 w-2.5 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    <h3 id="modal-project-title" class="font-bold text-xs text-slate-300 uppercase tracking-widest">
+                        Visualización del Proyecto
+                    </h3>
+                </div>
+                <div class="flex items-center gap-4">
+                    <!-- Controles de simulación de dispositivo -->
+                    <div class="hidden sm:flex bg-slate-900/80 p-1 rounded-xl border border-white/5">
+                        <button onclick="setModalViewport('desktop')" id="modal-view-desktop" class="p-2 rounded-lg text-indigo-400 bg-slate-800 transition-all" title="Vista Escritorio">
+                            <i class="fa-solid fa-desktop text-xs"></i>
+                        </button>
+                        <button onclick="setModalViewport('mobile')" id="modal-view-mobile" class="p-2 rounded-lg text-slate-500 hover:text-white transition-all" title="Vista Móvil">
+                            <i class="fa-solid fa-mobile-screen-button text-xs"></i>
+                        </button>
+                    </div>
+                    <!-- Botón Cerrar -->
+                    <button onclick="closeIframeModal()" class="text-slate-400 hover:text-white transition duration-200">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Cuerpo del Modal (Contenedor del Iframe con indicador de carga) -->
+            <div class="flex-1 bg-slate-950 flex justify-center items-center relative overflow-hidden">
+                
+                <!-- Indicador de Carga (Spinner) -->
+                <div id="modal-loader" class="absolute flex flex-col items-center gap-2 text-slate-500">
+                    <i class="fa-solid fa-spinner animate-spin text-2xl text-indigo-500"></i>
+                    <span class="text-[10px] tracking-widest uppercase font-bold">Cargando Demo Local...</span>
+                </div>
+
+                <!-- EL IFRAME DE VISUALIZACIÓN DINÁMICA -->
+                <div id="iframe-viewport-wrapper" class="w-full h-full transition-all duration-300 max-w-full">
+                    <iframe id="modal-iframe" class="w-full h-full border-0 bg-transparent opacity-0 transition-opacity duration-300"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIC SCRIPTS -->
+    <script>
+        // Función para abrir el visualizador de sitios web en vivo
+        function openIframeModal(filepath, projectTitle) {
+            const modal = document.getElementById('demo-modal');
+            const iframe = document.getElementById('modal-iframe');
+            const title = document.getElementById('modal-project-title');
+            const loader = document.getElementById('modal-loader');
+            
+            // Restablecer estilos de carga e Iframe
+            loader.classList.remove('hidden');
+            iframe.style.opacity = '0';
+            
+            // Configurar propiedades
+            title.textContent = projectTitle;
+            
+            // Asignamos el evento de carga de forma segura por JavaScript antes de definir el src
+            iframe.onload = onIframeLoaded;
+            
+            // AQUÍ SE ASIGNA EL PATH CORRESPONDIENTE AL ARCHIVO HTML
+            iframe.src = filepath;
+            
+            // Mostrar modal con transiciones
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                modal.firstElementChild.classList.remove('scale-95');
+                modal.firstElementChild.classList.add('scale-100');
+            }, 50);
+
+            // Cerrar modal al presionar escape
+            window.addEventListener('keydown', handleEscapeKey);
+        }
+
+        // Se ejecuta cuando el iframe termina de cargarse de manera local
+        function onIframeLoaded() {
+            const iframe = document.getElementById('modal-iframe');
+            const loader = document.getElementById('modal-loader');
+            
+            loader.classList.add('hidden');
+            iframe.style.opacity = '1';
+        }
+
+        // Cerrar modal del visualizador
+        function closeIframeModal() {
+            const modal = document.getElementById('demo-modal');
+            const iframe = document.getElementById('modal-iframe');
+            
+            modal.classList.remove('opacity-100');
+            modal.firstElementChild.classList.remove('scale-100');
+            modal.firstElementChild.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                iframe.onload = null; // Remueve el handler para evitar triggers no deseados
+                iframe.src = ""; // Liberar recursos
+            }, 300);
+
+            window.removeEventListener('keydown', handleEscapeKey);
+        }
+
+        // Manejar el cierre mediante tecla Escape
+        function handleEscapeKey(e) {
+            if (e.key === 'Escape') {
+                closeIframeModal();
+            }
+        }
+
+        // Simular viewports responsivos dentro del visualizador de proyectos
+        function setModalViewport(device) {
+            const wrapper = document.getElementById('iframe-viewport-wrapper');
+            const btnDesktop = document.getElementById('modal-view-desktop');
+            const btnMobile = document.getElementById('modal-view-mobile');
+
+            // Quitar estilos activos
+            btnDesktop.className = "p-2 rounded-lg text-slate-500 hover:text-white transition-all";
+            btnMobile.className = "p-2 rounded-lg text-slate-500 hover:text-white transition-all";
+
+            if (device === 'desktop') {
+                wrapper.style.maxWidth = '100%';
+                btnDesktop.classList.add('bg-slate-800', 'text-indigo-400');
+            } else if (device === 'mobile') {
+                wrapper.style.maxWidth = '390px';
+                btnMobile.classList.add('bg-slate-800', 'text-indigo-400');
+            }
+        }
+
+        // Envío del formulario de propuesta comercial directamente a WhatsApp
+        function sendProposalToWhatsApp() {
+            const name = document.getElementById('contact-name').value;
+            const type = document.getElementById('contact-type').value;
+            const message = document.getElementById('contact-message').value;
+
+            const text = `✉️ *NUEVA CONSULTA - AV DIGITAL (PORTFOLIO)* ✉️\n\nHola, me gustaría solicitar una propuesta para mi negocio:\n\n👤 *Contacto:* ${name}\n💻 *Tipo de Sitio:* ${type}\n📝 *Requerimientos:* ${message}\n\n_Por favor, pónganse en contacto conmigo para discutir el alcance del proyecto._`;
+
+            // Enlace de WhatsApp directo para el administrador del portafolio
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=50588888888&text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

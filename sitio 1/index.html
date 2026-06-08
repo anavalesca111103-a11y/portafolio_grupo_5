@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedor El Gordito - El Auténtico Vigorón Granadino</title>
+    <!-- Tailwind CSS para el diseño responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display e Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fffbeb; /* amber-50 */
+            color: #1e293b;
+        }
+        .font-gordito {
+            font-family: 'Playfair Display', serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- NAV BAR -->
+    <nav class="bg-amber-950 text-amber-100 px-6 py-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- Icono de plato y cubiertos en SVG elegante -->
+                <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+                <span class="font-gordito font-bold text-xl tracking-wide uppercase">El Gordito</span>
+            </div>
+            
+            <!-- Links de navegación de escritorio -->
+            <div class="hidden md:flex gap-8 text-sm font-semibold tracking-wide">
+                <a href="#historia" class="hover:text-amber-300 transition lang-text" data-es="Nuestra Historia" data-en="Our History">Nuestra Historia</a>
+                <a href="#menu" class="hover:text-amber-300 transition lang-text" data-es="El Menú" data-en="The Menu">El Menú</a>
+                <a href="#ordenar" class="hover:text-amber-300 transition lang-text" data-es="Hacer Pedido" data-en="Place Order">Hacer Pedido</a>
+            </div>
+
+            <!-- Selector de Idioma -->
+            <div class="flex bg-amber-900/60 p-1 rounded-lg border border-amber-800/80">
+                <button onclick="toggleLang('es')" id="lang-es" class="px-3 py-1 rounded text-xs font-bold bg-amber-500 text-amber-950 shadow-sm transition">ES</button>
+                <button onclick="toggleLang('en')" id="lang-en" class="px-3 py-1 rounded text-xs font-bold text-amber-300 hover:text-white transition">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-amber-900 text-white py-24 px-8 overflow-hidden">
+        <!-- Fondo geométrico decorativo autóctono simulado con CSS -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+            <span class="text-amber-400 font-bold uppercase tracking-widest text-xs bg-amber-950/50 px-4 py-1 rounded-full mb-4 border border-amber-700/30 lang-text" 
+                  data-es="El Auténtico Sabor del Parque Central de Granada" 
+                  data-en="The Authentic Taste of Granada Central Park">
+                El Auténtico Sabor del Parque Central de Granada
+            </span>
+            
+            <h1 class="font-gordito text-4xl md:text-6xl font-extrabold tracking-tight max-w-3xl leading-tight">
+                <span class="lang-text" data-es="Tradición en una Hoja de Chagüite" data-en="Tradition Served on a Chagüite Leaf">Tradición en una Hoja de Chagüite</span>
+            </h1>
+            
+            <p class="text-amber-100/90 text-sm md:text-lg mt-6 max-w-2xl leading-relaxed font-light">
+                <span class="lang-text" 
+                      data-es="Desde el corazón de la Gran Sultana, servimos el vigorón más famoso de Nicaragua. Yuca suave, chicharrón crujiente premium y nuestra inconfundible ensalada con miltomate." 
+                      data-en="From the heart of the Great Sultana, we serve Nicaragua's most famous vigorón. Tender cassava root, premium crispy pork rinds, and our unique salad with native miltomate.">
+                    Desde el corazón de la Gran Sultana, servimos el vigorón más famoso de Nicaragua. Yuca suave, chicharrón crujiente premium y nuestra inconfundible ensalada con miltomate.
+                </span>
+            </p>
+            
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#ordenar" class="bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold px-8 py-3.5 rounded-xl transition text-sm shadow-lg shadow-amber-950/50 uppercase tracking-wider lang-text" data-es="Ordenar por WhatsApp" data-en="Order via WhatsApp">Ordenar por WhatsApp</a>
+                <a href="#menu" class="bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-8 py-3.5 rounded-xl transition text-sm uppercase tracking-wider lang-text" data-es="Ver Menú Completo" data-en="View Full Menu">Ver Menú Completo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURES / HIGHLIGHTS -->
+    <section id="historia" class="max-w-6xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-amber-100 flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 text-2xl mb-6">
+                🏆
+            </div>
+            <h3 class="font-gordito text-xl font-bold text-amber-950 lang-text" data-es="Más de 40 Años de Historia" data-en="Over 40 Years of History">Más de 40 Años de Historia</h3>
+            <p class="text-slate-600 text-sm mt-3 leading-relaxed lang-text" 
+               data-es="Un legado gastronómico familiar recomendado por expertos, guías de viaje internacionales y la gente de nuestra Granada."
+               data-en="A family culinary legacy recommended by experts, international travel guides, and the people of our beloved Granada.">
+                Un legado gastronómico familiar recomendado por expertos, guías de viaje internacionales y la gente de nuestra Granada.
+            </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-amber-100 flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 text-2xl mb-6">
+                🍃
+            </div>
+            <h3 class="font-gordito text-xl font-bold text-amber-950 lang-text" data-es="Ingredientes Autóctonos" data-en="100% Native Ingredients">Ingredientes Autóctonos</h3>
+            <p class="text-slate-600 text-sm mt-3 leading-relaxed lang-text" 
+               data-es="Yuca cosechada localmente, chicharrón tostado con carne jugosa y ensalada fresca con mimbar y el toque ácido tradicional."
+               data-en="Locally harvested cassava, crispy pork rinds with juicy meat, and fresh salad featuring mimbar and that traditional tangy touch.">
+                Yuca cosechada localmente, chicharrón tostado con carne jugosa y ensalada fresca con mimbar y el toque ácido tradicional.
+            </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-amber-100 flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 text-2xl mb-6">
+                ⭐
+            </div>
+            <h3 class="font-gordito text-xl font-bold text-amber-950 lang-text" data-es="Servicio al Instante" data-en="Instant Service">Servicio al Instante</h3>
+            <p class="text-slate-600 text-sm mt-3 leading-relaxed lang-text" 
+               data-es="Olvidate de las filas. Pedí desde la web para recogerlo de inmediato al pasar por el Parque Colón."
+               data-en="Skip the lines. Order through our web app and pick it up instantly at Columbus Central Park.">
+                Olvidate de las filas. Pedí desde la web para recogerlo de inmediato al pasar por el Parque Colón.
+            </p>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="bg-white py-16 px-6 border-y border-amber-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-amber-600 font-bold uppercase tracking-widest text-xs lang-text" data-es="Fresco y del Día" data-en="Fresh Every Day">Fresco y del Día</span>
+                <h2 class="font-gordito text-3xl md:text-4xl font-extrabold text-amber-950 mt-2 lang-text" data-es="Nuestra Carta Tradicional" data-en="Our Traditional Menu">Nuestra Carta Tradicional</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Item 1: Vigorón Tradicional -->
+                <div class="p-6 rounded-2xl hover:bg-amber-50/50 transition border border-dashed border-amber-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-start gap-4">
+                        <!-- Icono SVG de plato de vigorón tradicional -->
+                        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-11.314l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 110 8 4 4 0 010-8z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-gordito font-bold text-amber-900 text-xl flex items-center gap-2">
+                                <span class="lang-text" data-es="Vigorón Tradicional" data-en="Traditional Vigoron">Vigorón Tradicional</span>
+                                <span class="bg-amber-200 text-amber-950 text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider lang-text" data-es="El de la Casa" data-en="Signature">El de la Casa</span>
+                            </span>
+                            <p class="text-slate-600 text-sm mt-1.5 max-w-lg leading-relaxed lang-text" 
+                               data-es="Cama de yuca cocida en su punto, chicharrón crujiente premium con carne, y nuestra famosa ensalada de repollo, miltomate y chile con mimbar."
+                               data-en="Perfectly boiled warm cassava root, premium crispy pork rinds with meat, and our famous cabbage, miltomate and mimbar chili salad.">
+                                Cama de yuca cocida en su punto, chicharrón crujiente premium con carne, y nuestra famosa ensalada de repollo, miltomate y chile con mimbar.
+                            </p>
+                        </div>
+                    </div>
+                    <span class="text-2xl font-bold text-amber-600 self-end sm:self-center bg-amber-50 px-4 py-2 rounded-xl border border-amber-100">C$ 120.00</span>
+                </div>
+
+                <!-- Item 2: Cacao con Leche -->
+                <div class="p-6 rounded-2xl hover:bg-amber-50/50 transition border border-dashed border-amber-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+                    <div class="flex items-start gap-4">
+                        <!-- Icono SVG de Bebida en Jícara -->
+                        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-11.314l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 110 8 4 4 0 010-8z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-gordito font-bold text-amber-900 text-xl">
+                                <span class="lang-text" data-es="Cacao en Jícara" data-en="Iced Cocoa in Jícara Cup">Cacao en Jícara</span>
+                            </span>
+                            <p class="text-slate-600 text-sm mt-1.5 max-w-lg leading-relaxed lang-text" 
+                               data-es="Elaborado artesanalmente con cacao puro molido en piedra, leche entera fresca, un toque de canela y abundante hielo."
+                               data-en="Artisanal cocoa ground on stone, fresh whole milk, a touch of cinnamon, and plenty of ice. Served cold.">
+                                Elaborado artesanalmente con cacao puro molido en piedra, leche entera fresca, un toque de canela y abundante hielo.
+                            </p>
+                        </div>
+                    </div>
+                    <span class="text-2xl font-bold text-amber-600 self-end sm:self-center bg-amber-50 px-4 py-2 rounded-xl border border-amber-100">C$ 40.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CALCULATOR SECTION -->
+    <section id="ordenar" class="bg-amber-100/40 py-16 px-6">
+        <div class="max-w-md mx-auto bg-white p-8 rounded-3xl shadow-xl border border-amber-200">
+            <h3 class="font-gordito text-2xl font-bold text-amber-950 text-center flex items-center justify-center gap-2">
+                <span>🛒</span> <span class="lang-text" data-es="Calculadora de Pedidos" data-en="Order Calculator">Calculadora de Pedidos</span>
+            </h3>
+            <p class="text-center text-slate-500 text-xs mt-2 lang-text" data-es="Armá tu pedido y mandalo listo a nuestro WhatsApp" data-en="Build your order and send it ready to our WhatsApp">Armá tu pedido y mandalo listo a nuestro WhatsApp</p>
+            
+            <div class="mt-8 space-y-5">
+                <!-- Selector Vigorón -->
+                <div class="flex justify-between items-center bg-amber-50 p-4 rounded-2xl border border-amber-100">
+                    <div>
+                        <p class="font-bold text-amber-950 text-sm lang-text" data-es="Vigorón Tradicional" data-en="Traditional Vigoron">Vigorón Tradicional</p>
+                        <p class="text-xs text-slate-500">C$ 120.00</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="changeQty('vigoron', -1)" class="w-9 h-9 rounded-full bg-amber-200 text-amber-900 font-bold hover:bg-amber-300 flex items-center justify-center transition">-</button>
+                        <span id="qty-vigoron" class="font-bold text-slate-850 w-6 text-center">0</span>
+                        <button onclick="changeQty('vigoron', 1)" class="w-9 h-9 rounded-full bg-amber-200 text-amber-900 font-bold hover:bg-amber-300 flex items-center justify-center transition">+</button>
+                    </div>
+                </div>
+
+                <!-- Selector Cacao -->
+                <div class="flex justify-between items-center bg-amber-50 p-4 rounded-2xl border border-amber-100">
+                    <div>
+                        <p class="font-bold text-amber-950 text-sm lang-text" data-es="Cacao en Jícara" data-en="Cacao in Jícara">Cacao en Jícara</p>
+                        <p class="text-xs text-slate-500">C$ 40.00</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="changeQty('cacao', -1)" class="w-9 h-9 rounded-full bg-amber-200 text-amber-900 font-bold hover:bg-amber-300 flex items-center justify-center transition">-</button>
+                        <span id="qty-cacao" class="font-bold text-slate-850 w-6 text-center">0</span>
+                        <button onclick="changeQty('cacao', 1)" class="w-9 h-9 rounded-full bg-amber-200 text-amber-900 font-bold hover:bg-amber-300 flex items-center justify-center transition">+</button>
+                    </div>
+                </div>
+
+                <!-- Total -->
+                <div class="border-t border-amber-100 pt-5 mt-6">
+                    <div class="flex justify-between items-center font-bold text-lg text-amber-950">
+                        <span class="lang-text" data-es="Total Estimado:" data-en="Estimated Total:">Total Estimado:</span>
+                        <span class="text-2xl text-amber-600" id="total-cordobas">C$ 0.00</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs text-slate-500 mt-1">
+                        <span class="lang-text" data-es="Equivalente en Dólares (Aprox):" data-en="US Dollar Equivalent:">Equivalente en Dólares (Aprox):</span>
+                        <span id="total-dolares">$ 0.00</span>
+                    </div>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button onclick="sendOrder()" class="w-full mt-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span class="lang-text" data-es="Enviar Pedido por WhatsApp" data-en="Send Order via WhatsApp">Enviar Pedido por WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / MAPS SECTION -->
+    <footer class="bg-amber-950 text-amber-100 py-16 px-6 mt-auto">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h4 class="font-gordito text-2xl text-amber-400 font-bold lang-text" data-es="¿Cómo Encontrarnos?" data-en="How to Find Us?">¿Cómo Encontrarnos?</h4>
+                <p class="text-sm text-amber-200/90 mt-3 leading-relaxed lang-text" 
+                   data-es="Estamos ubicados frente a la glorieta principal del Parque de Colón en Granada. El punto de reunión gastronómica de la ciudad."
+                   data-en="We are located right in front of the main gazebo in Columbus Central Park, Granada. The culinary hotspot of the city.">
+                    Estamos ubicados frente a la glorieta principal del Parque de Colón en Granada. El punto de reunión gastronómica de la ciudad.
+                </p>
+                
+                <div class="mt-6 space-y-3 text-xs font-semibold text-amber-300">
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-clock"></i> <span class="lang-text" data-es="Abierto de Lunes a Domingo — 8:00 AM a 6:00 PM" data-en="Open Daily — 8:00 AM to 6:00 PM">Abierto de Lunes a Domingo — 8:00 AM a 6:00 PM</span></p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-map-pin"></i> <span class="lang-text" data-es="Parque Central Colón, Granada, Nicaragua" data-en="Columbus Central Park, Granada, Nicaragua">Parque Central Colón, Granada, Nicaragua</span></p>
+                </div>
+            </div>
+
+            <!-- Mapa / Ficha de Google Maps Simulada -->
+            <div class="bg-amber-900/40 p-6 rounded-3xl border border-amber-800 flex flex-col items-center text-center">
+                <svg class="w-12 h-12 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <h5 class="font-bold text-white text-sm lang-text" data-es="Ubicación Certificada de Google Maps" data-en="Certified Google Maps Location">Ubicación Certificada de Google Maps</h5>
+                <p class="text-xs text-amber-200 mt-1.5 leading-relaxed lang-text" 
+                   data-es="¡Búscanos en tu mapa digital para ver las reseñas de miles de viajeros que nos han visitado!"
+                   data-en="Look us up on your digital maps to see reviews from thousands of global travelers who have visited us!">
+                    ¡Búscanos en tu mapa digital para ver las reseñas de miles de viajeros que nos han visitado!
+                </p>
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto border-t border-amber-900/60 mt-12 pt-6 text-center text-xs text-amber-400/60">
+            &copy; 2026 Comedor El Gordito S.A. <span class="lang-text" data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Configuración de cantidades
+        let order = {
+            vigoron: 0,
+            cacao: 0
+        };
+
+        const PRECIOS = {
+            vigoron: 120,
+            cacao: 40
+        };
+
+        const TIPO_CAMBIO = 36.80; // Córdobas por Dólar nicaragüense aproximado
+
+        function changeQty(item, val) {
+            let newVal = order[item] + val;
+            if (newVal >= 0) {
+                order[item] = newVal;
+                document.getElementById(`qty-${item}`).textContent = newVal;
+                updateTotals();
+            }
+        }
+
+        function updateTotals() {
+            let cordobas = (order.vigoron * PRECIOS.vigoron) + (order.cacao * PRECIOS.cacao);
+            let usd = cordobas / TIPO_CAMBIO;
+
+            document.getElementById('total-cordobas').textContent = `C$ ${cordobas.toFixed(2)}`;
+            document.getElementById('total-dolares').textContent = `$ ${usd.toFixed(2)}`;
+        }
+
+        function toggleLang(lang) {
+            document.querySelectorAll('.lang-text').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+
+            // Actualizar estilo de botones de lenguaje
+            if (lang === 'es') {
+                document.getElementById('lang-es').className = "px-3 py-1 rounded text-xs font-bold bg-amber-500 text-amber-950 shadow-sm transition";
+                document.getElementById('lang-en').className = "px-3 py-1 rounded text-xs font-bold text-amber-300 hover:text-white transition";
+            } else {
+                document.getElementById('lang-en').className = "px-3 py-1 rounded text-xs font-bold bg-amber-500 text-amber-950 shadow-sm transition";
+                document.getElementById('lang-es').className = "px-3 py-1 rounded text-xs font-bold text-amber-300 hover:text-white transition";
+            }
+        }
+
+        function sendOrder() {
+            if (order.vigoron === 0 && order.cacao === 0) {
+                alert("Por favor, selecciona al menos un vigorón o cacao en la calculadora.");
+                return;
+            }
+
+            let text = `🍽️ *PEDIDO INTERACTIVO - EL GORDITO* 🍽️\n\nHola, me gustaría encargar la siguiente orden para llevar:\n\n`;
+            if (order.vigoron > 0) text += `🍃 *Vigorón Tradicional:* ${order.vigoron} x C$ 120.00\n`;
+            if (order.cacao > 0) text += `🥤 *Cacao en Jícara:* ${order.cacao} x C$ 40.00\n`;
+            
+            let total = (order.vigoron * PRECIOS.vigoron) + (order.cacao * PRECIOS.cacao);
+            text += `\n💰 *Total Estimado:* C$ ${total.toFixed(2)}\n\n_Por favor infórmenme si mi orden puede ser preparada de inmediato._`;
+
+            // Número telefónico ficticio para la demostración
+            const apiLink = `https://api.whatsapp.com/send?phone=50588888888&text=${encodeURIComponent(text)}`;
+            window.open(apiLink, '_blank');
+        }
+    </script>
+</body>
+</html>

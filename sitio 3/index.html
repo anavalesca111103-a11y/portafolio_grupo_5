@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fritanga El Bohemio - La Carne Asada de Managua</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat e Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0a09; /* stone-950 */
+            color: #f5f5f4;
+        }
+        .font-bohemio {
+            font-family: 'Montserrat', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+    <nav class="bg-stone-900/90 border-b border-orange-950/40 px-6 py-4 sticky top-0 z-50 shadow-xl backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl text-orange-500">🔥</span>
+                <span class="font-bohemio font-black text-lg tracking-wider text-orange-500 uppercase">El Bohemio</span>
+            </div>
+            
+            <div class="hidden md:flex gap-6 text-xs font-bold tracking-widest text-stone-300">
+                <a href="#brasas" class="hover:text-orange-500 transition">LAS BRASAS</a>
+                <a href="#armar" class="hover:text-orange-500 transition">ARMÁ TU PLATO</a>
+                <a href="#ubicacion" class="hover:text-orange-500 transition">UBICACIÓN</a>
+            </div>
+
+            <span class="bg-orange-500 text-stone-950 text-[10px] px-3.5 py-1.5 rounded-full font-black uppercase tracking-wider">
+                Rotonda El Periodista
+            </span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative py-28 px-8 border-b border-orange-950/20 text-center overflow-hidden bg-gradient-to-b from-stone-900 to-stone-950">
+        <!-- Efecto de humo/fuego simulado con círculos CSS con baja opacidad -->
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-orange-600/10 rounded-full blur-[120px]"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
+            <span class="text-orange-500 text-xs font-extrabold uppercase tracking-widest bg-orange-500/10 px-4 py-1.5 rounded-full border border-orange-500/20 mb-6">
+                Sazón Nocturno Nicaragüense
+            </span>
+            <h1 class="font-bohemio text-4xl md:text-6xl font-black text-white leading-none uppercase tracking-tight">
+                Carne asada al carbón<br><span class="text-orange-500">de verdad</span>
+            </h1>
+            <p class="text-stone-400 text-xs md:text-sm mt-6 max-w-xl leading-relaxed">
+                Asados jugosos de res, cerdo y pollo con gallopinto bien frito, tajadas frescas, maduro con queso y nuestra mítica ensalada con chile criollo.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#armar" class="bg-orange-500 hover:bg-orange-400 text-stone-950 font-black px-8 py-3.5 rounded-full transition text-xs uppercase tracking-widest">Armá tu Plato</a>
+                <a href="#brasas" class="bg-transparent border border-stone-800 hover:border-stone-700 text-stone-300 font-bold px-8 py-3.5 rounded-full transition text-xs uppercase tracking-widest">Ver Carta de Asados</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HIGH QUALITY BRASAS CARDS -->
+    <section id="brasas" class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Nuestra Especialidad</span>
+            <h2 class="font-bohemio text-2xl md:text-4xl font-black text-white uppercase mt-2">La Parrilla Tradicional</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-stone-900/60 p-6 rounded-2xl border border-stone-850 text-center">
+                <span class="text-3xl">🥩</span>
+                <h4 class="font-bohemio font-extrabold text-sm text-white uppercase mt-4">Res de Exportación</h4>
+                <p class="text-stone-400 text-xs mt-2 leading-relaxed">Filete de res marinado con naranja agria y ajo nacional, asado a fuego lento al carbón.</p>
+            </div>
+            <div class="bg-stone-900/60 p-6 rounded-2xl border border-stone-850 text-center">
+                <span class="text-3xl">🥓</span>
+                <h4 class="font-bohemio font-extrabold text-sm text-white uppercase mt-4">Cerdo Adobado</h4>
+                <p class="text-stone-400 text-xs mt-2 leading-relaxed">Costilla o lomo de cerdo untado en achiote y especias criollas, tierno por dentro y tostado por fuera.</p>
+            </div>
+            <div class="bg-stone-900/60 p-6 rounded-2xl border border-stone-850 text-center">
+                <span class="text-3xl">🍗</span>
+                <h4 class="font-bohemio font-extrabold text-sm text-white uppercase mt-4">Pollo a las Brasas</h4>
+                <p class="text-stone-400 text-xs mt-2 leading-relaxed">Muslos de pollo marinados con chimichurri casero, asados con un toque ahumado especial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SERVICE BUILDER -->
+    <section id="armar" class="py-20 px-6 max-w-4xl mx-auto bg-stone-900/30 rounded-3xl border border-stone-900">
+        <div class="text-center mb-12">
+            <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Interactivo</span>
+            <h3 class="font-bohemio text-2xl md:text-3xl font-black uppercase text-white mt-2">Armá tu plato fritanguero</h3>
+            <p class="text-stone-500 text-xs mt-2">Seleccioná tu base y acompañamientos. Calculamos el precio neto de inmediato.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Selector de Opciones -->
+            <div class="space-y-6">
+                <!-- Proteína -->
+                <div>
+                    <h4 class="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3">1. Elegí tu Carnita</h4>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="selectProtein('res', 150)" id="btn-prot-res" class="p-3 rounded-xl text-xs font-bold bg-orange-500 text-stone-950 border border-orange-500 transition">
+                            Res Asada<br><span class="text-[10px] opacity-85">C$ 150</span>
+                        </button>
+                        <button onclick="selectProtein('cerdo', 130)" id="btn-prot-cerdo" class="p-3 rounded-xl text-xs font-semibold bg-stone-900 border border-stone-800 text-stone-400 hover:text-white transition">
+                            Cerdo Asado<br><span class="text-[10px]">C$ 130</span>
+                        </button>
+                        <button onclick="selectProtein('pollo', 120)" id="btn-prot-pollo" class="p-3 rounded-xl text-xs font-semibold bg-stone-900 border border-stone-800 text-stone-400 hover:text-white transition">
+                            Pollo Asado<br><span class="text-[10px]">C$ 120</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bastimento -->
+                <div>
+                    <h4 class="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3">2. Elegí tu Acompañante</h4>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="selectSide('tajadas', 20)" id="btn-side-tajadas" class="p-3 rounded-xl text-xs font-bold bg-orange-500 text-stone-950 border border-orange-500 transition">
+                            Tajadas<br><span class="text-[10px] opacity-85">C$ 20</span>
+                        </button>
+                        <button onclick="selectSide('maduro', 25)" id="btn-side-maduro" class="p-3 rounded-xl text-xs font-semibold bg-stone-900 border border-stone-800 text-stone-400 hover:text-white transition">
+                            Maduro<br><span class="text-[10px]">C$ 25</span>
+                        </button>
+                        <button onclick="selectSide('tortilla', 10)" id="btn-side-tortilla" class="p-3 rounded-xl text-xs font-semibold bg-stone-900 border border-stone-800 text-stone-400 hover:text-white transition">
+                            Tortilla<br><span class="text-[10px]">C$ 10</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Extras -->
+                <div>
+                    <h4 class="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3">3. ¿Algo extra?</h4>
+                    <div class="flex gap-4">
+                        <label class="flex items-center gap-3 cursor-pointer bg-stone-900 p-4 rounded-xl border border-stone-800 flex-1 justify-center">
+                            <input type="checkbox" id="chk-queso" onchange="calculate()" class="w-4 h-4 accent-orange-500 rounded border-stone-750">
+                            <span class="text-xs font-semibold text-stone-200">Queso Frito (+C$ 35)</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer bg-stone-900 p-4 rounded-xl border border-stone-800 flex-1 justify-center">
+                            <input type="checkbox" id="chk-gallopinto" onchange="calculate()" class="w-4 h-4 accent-orange-500 rounded border-stone-750" checked>
+                            <span class="text-xs font-semibold text-stone-200">Gallo Pinto (+C$ 30)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cuenta Resumen -->
+            <div class="bg-stone-900 p-6 rounded-2xl border border-stone-850 flex flex-col justify-between shadow-xl">
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-6">Resumen del Plato Fritanguero</h4>
+                    <div class="space-y-3 text-xs" id="resumen-lista">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="border-t border-stone-800 pt-5 mt-6">
+                    <div class="flex justify-between items-center text-white font-extrabold text-xl">
+                        <span class="font-bohemio">Total Neto:</span>
+                        <span class="text-orange-500 text-2xl font-black" id="plato-total">C$ 200.00</span>
+                    </div>
+                    <p class="text-[10px] text-stone-500 mt-2">Incluye Ensalada de Repollo Tradicional y aderezo criollo sin costo extra.</p>
+                    
+                    <button onclick="sendOrder()" class="w-full mt-6 bg-orange-500 hover:bg-orange-400 text-stone-950 font-black py-4 rounded-xl text-xs uppercase tracking-widest transition flex items-center justify-center gap-3 shadow-lg shadow-orange-500/15">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Mandar mi Pedido Fritanguero
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / MAPS LINK -->
+    <footer id="ubicacion" class="bg-stone-900 text-stone-400 py-16 px-6 border-t border-stone-950 mt-auto">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h4 class="font-bohemio text-xs font-bold uppercase text-white tracking-widest">Fritanga El Bohemio</h4>
+                <p class="text-xs mt-3 leading-relaxed">
+                    Ubicado al Costado Oeste de la Rotonda El Periodista, Managua, Nicaragua.
+                </p>
+                <p class="text-xs mt-4"><span class="text-orange-500 font-bold">Brasas Activas:</span> Mar - Dom: 5:00 PM - 1:00 AM (Exclusivo cena nocturna)</p>
+            </div>
+
+            <div class="bg-stone-950/80 p-6 rounded-2xl border border-stone-850 flex items-center gap-4">
+                <span class="text-2xl">🛵</span>
+                <div>
+                    <h5 class="text-xs font-bold text-white uppercase font-bohemio">¿Fresa de frío en casa?</h5>
+                    <p class="text-[10px] text-stone-500 mt-1 leading-relaxed">Hacemos entregas a domicilio seguras en toda el área de Plaza España, Altagracia y Rubenia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto border-t border-stone-850 mt-12 pt-6 text-center text-xs text-stone-600">
+            &copy; 2026 Fritanga El Bohemio. Auténtica comida nicaragüense.
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE APP SCRIPT -->
+    <script>
+        let selection = {
+            protein: 'res',
+            protein_price: 150,
+            side: 'tajadas',
+            side_price: 20
+        };
+
+        function selectProtein(item, price) {
+            selection.protein = item;
+            selection.protein_price = price;
+
+            // Reset buttons
+            document.querySelectorAll('[id^="btn-prot-"]').forEach(btn => {
+                btn.className = "p-3 rounded-xl text-xs font-semibold bg-stone-900 border border-stone-800 text-stone-400 hover:text-white transition";
+            });
+
+            // Set active
+            document.getElementById(`btn-prot-${item}`).className = "p-3 rounded-xl text-xs font-bold bg-orange-500 text-stone-950 border border-orange-500 transition";
+            calculate();
+        }
+
+        function selectSide(item, price) {
+            selection.side = item;
+            selection.side_price = price;
+
+            // Reset buttons
+            document.querySelectorAll('[id^="btn-side-"]').forEach(btn => {
+                btn.className = "p-3 rounded-xl text-xs font-semibold bg-stone-900 border border-stone-800 text-stone-400 hover:text-white transition";
+            });
+
+            // Set active
+            document.getElementById(`btn-side-${item}`).className = "p-3 rounded-xl text-xs font-bold bg-orange-500 text-stone-950 border border-orange-500 transition";
+            calculate();
+        }
+
+        function calculate() {
+            let total = selection.protein_price + selection.side_price;
+            let chkQueso = document.getElementById('chk-queso').checked;
+            let chkGalloPinto = document.getElementById('chk-gallopinto').checked;
+
+            let listHTML = `
+                <div class="flex justify-between text-stone-300">
+                    <span>Carne de ${selection.protein === 'res' ? 'Res' : selection.protein === 'cerdo' ? 'Cerdo' : 'Pollo'} Asada</span>
+                    <span>C$ ${selection.protein_price}</span>
+                </div>
+                <div class="flex justify-between text-stone-300">
+                    <span>Bastimento (${selection.side === 'tajadas' ? 'Tajadas' : selection.side === 'maduro' ? 'Maduro' : 'Tortilla'})</span>
+                    <span>C$ ${selection.side_price}</span>
+                </div>
+            `;
+
+            if (chkQueso) {
+                total += 35;
+                listHTML += `
+                    <div class="flex justify-between text-orange-400 font-semibold">
+                        <span>Adicional: Queso Frito</span>
+                        <span>C$ 35</span>
+                    </div>
+                `;
+            }
+
+            if (chkGalloPinto) {
+                total += 30;
+                listHTML += `
+                    <div class="flex justify-between text-orange-400 font-semibold">
+                        <span>Adicional: Gallo Pinto</span>
+                        <span>C$ 30</span>
+                    </div>
+                `;
+            }
+
+            document.getElementById('resumen-lista').innerHTML = listHTML;
+            document.getElementById('plato-total').textContent = `C$ ${total.toFixed(2)}`;
+        }
+
+        function sendOrder() {
+            let chkQueso = document.getElementById('chk-queso').checked;
+            let chkGalloPinto = document.getElementById('chk-gallopinto').checked;
+            let total = selection.protein_price + selection.side_price + (chkQueso ? 35 : 0) + (chkGalloPinto ? 30 : 0);
+
+            const text = `🔥 *FRITANGA EL BOHEMIO - PEDIDO ONLINE* 🔥\n\nHola, me gustaría encargar un plato fritanguero con las siguientes opciones:\n\n🥩 *Carne:* ${selection.protein === 'res' ? 'Res Asada' : selection.protein === 'cerdo' ? 'Cerdo Asado' : 'Pollo Asado'}\n🍌 *Bastimento:* ${selection.side}\n🧀 *Adicionales:* ${chkQueso ? 'Queso Frito' : ''} ${chkGalloPinto ? 'Gallo Pinto' : ''}\n\n💰 *Total Neto:* C$ ${total.toFixed(2)}\n\n_Por favor coordinar el delivery para mi domicilio._`;
+
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=50588888888&text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Initialize calculations
+        calculate();
+    </script>
+</body>
+</html>
